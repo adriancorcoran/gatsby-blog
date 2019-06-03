@@ -1,0 +1,433 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.8.2"/><title data-react-helmet="true"></title><link rel="shortcut icon" href="/your-repo-name/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="manifest" href="/your-repo-name/manifest.webmanifest"/><meta name="theme-color" content="#663399"/><link rel="apple-touch-icon" sizes="48x48" href="/your-repo-name/icons/icon-48x48.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="72x72" href="/your-repo-name/icons/icon-72x72.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="96x96" href="/your-repo-name/icons/icon-96x96.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="144x144" href="/your-repo-name/icons/icon-144x144.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="192x192" href="/your-repo-name/icons/icon-192x192.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="256x256" href="/your-repo-name/icons/icon-256x256.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="384x384" href="/your-repo-name/icons/icon-384x384.png?v=008654519ce705ac7bc44303a9014606"/><link rel="apple-touch-icon" sizes="512x512" href="/your-repo-name/icons/icon-512x512.png?v=008654519ce705ac7bc44303a9014606"/><link as="script" rel="preload" href="/your-repo-name/component---src-templates-blog-post-js-e4a117b922acdaf0a26a.js"/><link as="script" rel="preload" href="/your-repo-name/app-5ea056d26ea378e3abcd.js"/><link as="script" rel="preload" href="/your-repo-name/webpack-runtime-2aa1455c642d3d5fbb7a.js"/><link as="fetch" rel="preload" href="/your-repo-name/static/d/372/path---ruby-commands-and-code-737-580-gY5hJO2lVwGOI8iJBMnBGyDkY.json" crossorigin="use-credentials"/></head><body><noscript id="gatsby-noscript">This app works best with JavaScript enabled.</noscript><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div><h1>Ruby - Commands &amp; Code</h1><div><h1>Ruby: Commands &#x26; Code</h1>
+<h1>Basics</h1>
+<h2>Objects</h2>
+<p>Everything is an Object (well, 99.9%)!</p>
+<p><strong><em>obj.class</em></strong> What’s this class?</p>
+<p><strong><em>obj.superclass</em></strong> How about inherited class?</p>
+<p><strong><em>obj.ancestors</em></strong> Check out the family tree, shall we?</p>
+<p>Variables</p>
+<p><strong><em>var</em></strong> Local Variable</p>
+<p><strong><em>$var</em></strong> Global Variable</p>
+<p><strong><em>@var</em></strong> Instance variable (OBJ)</p>
+<p><strong><em>@@var</em></strong> Class variable</p>
+<p><strong><em>MY</em>VAR_</strong> constant, of course.</p>
+<h2>Blocks</h2>
+<p>Blocks are simple "blocks of code"’ that can be called and sent code/variables to execute within the block. Use the “yield” within the block to use the calling source code/variables</p>
+<pre><code>def test
+</code></pre>
+<p>puts "You are Here"</p>
+<p>yield</p>
+<p>puts "Now you’re There!"</p>
+<p>yield</p>
+<p>end</p>
+<p>test {puts "Where?"}</p>
+<p>Output:</p>
+<p>You are Here</p>
+<p>Where?</p>
+<p>Now you’re There!</p>
+<p>Where?</p>
+<h2>Methods</h2>
+<p>All methods will return something, whether you like it or not!</p>
+<p>Special Method Stuff:</p>
+<p><strong><em>attr</em>accessor_</strong> makes an instance variable, access and assignment method.</p>
+<p><strong><em>a</em>**</strong><em>ttr</em>reader _** instance variables and corresponding methods that return the value of each instance variable</p>
+<p><strong><em>attr</em>writer_</strong> creates accessor method and allows them to be assigned</p>
+<hr>
+<h1>In Terminal</h1>
+<h2>$ ruby -v</h2>
+<p>Get the version of ruby installed</p>
+<p>E.g. ruby -v</p>
+<h2>$ irb</h2>
+<p>Start the Ruby interactive shell</p>
+<p>E.g. irb</p>
+<hr>
+<h1>YAML</h1>
+<p><a href="https://rhnh.net/2011/01/31/yaml-tutorial/">https://rhnh.net/2011/01/31/yaml-tutorial/</a></p>
+<h2>Install</h2>
+<p>$gem install yaml-lint</p>
+<h2>Check a file - $ yaml-lint filename.yaml</h2>
+<p>Checks a file is correct YAML</p>
+<p>E.g. $yaml-lint filename.yaml</p>
+<h2>Check a whole folder - $ yaml-lint folder_name/</h2>
+<p>Checks a whole folder’s files are correct YAML</p>
+<p>E.g. $yaml-lint my_folder/</p>
+<hr>
+<h1>MiniTest</h1>
+<p><a href="https://github.com/bibstha/intro-to-ruby-minitest">https://github.com/bibstha/intro-to-ruby-minitest</a></p>
+<h2>Install</h2>
+<p>$bundle install --path vendor/bundle</p>
+<h2>Run test on file</h2>
+<p>$bundle exec rake TEST=path<em>to</em>file</p>
+<hr>
+<h1>Gems</h1>
+<p><a href="https://guides.rubygems.org/make-your-own-gem/#introduction">https://guides.rubygems.org/make-your-own-gem/#introduction</a></p>
+<h2>Basic file requirements</h2>
+<ul>
+<li>
+<p>gemname.gemspec</p>
+</li>
+<li>
+<p>Lib</p>
+<ul>
+<li>Gemname.rb</li>
+</ul>
+</li>
+</ul>
+<h2>Create gem</h2>
+<ol>
+<li>
+<p>Run $gem build gemname.gemspec - builds gem and gives you a file with a version called <strong>_gemname-0.0.0.gem _</strong>or similar</p>
+</li>
+<li>
+<p>Run $gem install ./gemname-0.0.0.gem - installs gem locally</p>
+<ol>
+<li>May need to use sudo to do this</li>
+</ol>
+</li>
+<li>
+<p>If you edit the files, then rebuild and reinstall</p>
+</li>
+<li>
+<p>If you have external dependencies, then add them to the gemspec file like this: <a href="https://github.com/Shopify/internal_app_engine/blob/master/internal_app.gemspec">https://github.com/Shopify/internal<em>app</em>engine/blob/master/internal_app.gemspec</a></p>
+</li>
+<li>
+<p>Link above is also good for how to add multiple files and folders</p>
+</li>
+</ol>
+<h2>Adding to RubyGems.org</h2>
+<p>You need to have a verified account with rubygems.org. Once your gem is ready:</p>
+<ol>
+<li>
+<p>Run $gem push gemname-0.0.0.gem</p>
+</li>
+<li>
+<p>You may need to login to your account during this</p>
+</li>
+</ol>
+<p>Also, you can download your credentials by going to <a href="https://rubygems.org/api/v1/api_key.yaml">https://rubygems.org/api/v1/api_key.yaml</a> and logging in. You then save the .yml file as <strong><em>credentials.yml</em></strong> in <strong><em>~/.gem</em></strong></p>
+<h2>List gems</h2>
+<ol>
+<li>Run $gem list to see all gems and their installed versions</li>
+</ol>
+<h2>Uninstall a gem</h2>
+<ol start="2">
+<li>
+<p>Run $gem uninstall gemname</p>
+<ol>
+<li>
+<p>If multiple versions, you will get a prompt to ask which or all versions to uninstall</p>
+</li>
+<li>
+<p>May need to use sudo to do this</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1>CLI-Kit</h1>
+<p><a href="https://github.com/Shopify/cli-kit">https://github.com/Shopify/cli-kit</a></p>
+<h2>Install</h2>
+<p>$gem install cli-kit</p>
+<h2>Create project</h2>
+<p>$cli-kit new myproject -> choose Bundler</p>
+<h2>Install dependencies</h2>
+<p>$bundle install</p>
+<h2>Run application command</h2>
+<p>Cd to <strong><em>myproject</em></strong> folder and run $./exe/myproject</p>
+<h2>Add commands</h2>
+<p><a href="https://github.com/Shopify/cli-kit">https://github.com/Shopify/cli-kit</a></p>
+<h2>Add UI elements to make it prettier :)</h2>
+<p><a href="https://github.com/Shopify/cli-ui">https://github.com/Shopify/cli-ui</a></p>
+<h2>When adding to an existing project</h2>
+<ol>
+<li>Modify the Gemfile and add in</li>
+</ol>
+<p>gem 'cli-kit', '~> 3.1.0'</p>
+<p>gem 'cli-ui', '~> 1.1.4'</p>
+<p>group :test do</p>
+<p>gem 'mocha', '~> 1.5.0', require: false</p>
+<p>gem 'minitest', '>= 5.0.0', require: false</p>
+<p>gem 'minitest-reporters', require: false</p>
+<p>end</p>
+<ol start="2">
+<li>
+<p>Run $bundle install to install new dependencies</p>
+</li>
+<li>
+<p>Run $dev up to check bundler and ruby versions</p>
+</li>
+<li>
+<p>Run $cli-kit new myproject -> this will create a <strong><em>myproject</em></strong> folder containing all the CLI files.</p>
+</li>
+<li>
+<p>If you wish, you can move the folder within <strong><em>myproject/lib</em></strong> up to the main <strong><em>/lib</em></strong> folder - the paths are relative and will keep working</p>
+<ol>
+<li>Move the <strong><em>lib/myproject</em></strong> directory and <strong><em>lib/myproject.rb</em></strong> file</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1>Byebug</h1>
+<p><a href="https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md">https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md</a> - command list near bottom of page</p>
+<h2>$ require 'byebug'</h2>
+<p>Use the byebug object when running your code. This allows you to insert "byebug" in your code wherever you want it to break</p>
+<p>E.g. require 'byebug'</p>
+<h2>$ byebug <em>filename.rb</em></h2>
+<p>Starts byebug on your file, if you don’t want to put ‘byebug" in the code</p>
+<p>E.g. byebug filename.rb</p>
+<h2>$ step</h2>
+<p>Steps through an iteration of code</p>
+<p>E.g. step</p>
+<h2>$ <em>var</em>name_</h2>
+<p>Displays a variables value</p>
+<p>E.g. <em>var</em>name_</p>
+<h2>$ display <em>var</em>name_</h2>
+<p>Displays a variables value as you step through</p>
+<p>E.g. display <em>var</em>name_</p>
+<h2>$ undisplay *var_name *or undisplay 3</h2>
+<p>Undisplays the variables you step through</p>
+<p>E.g. undisplay <em>var</em>name_</p>
+<h2>$ break 5</h2>
+<p>Create a breakpoint at line 5 of the code</p>
+<p>E.g. break 5</p>
+<h2>$ continue</h2>
+<p>Continue after a breakpoint</p>
+<p>E.g. continue</p>
+<h2>$ set linetrace</h2>
+<p>Turns on line tracing so you can see which lines of code are being executed</p>
+<p>E.g. set linetrace</p>
+<h2>$ set basename</h2>
+<p>Stops the full filename path being displayed, just the filename shows</p>
+<p>E.g. set basename</p>
+<h2>$ eval <em>var</em>name_</h2>
+<p>Displays the value of a variable</p>
+<p>E.g. eval var_name</p>
+<h2>$ private_methods</h2>
+<p>Show available private methods</p>
+<p>E.g. private_methods</p>
+<p>Check if private method included</p>
+<p>E.g. private_methods.member?(:hanoi) # => true / false</p>
+<hr>
+<h1>In Ruby</h1>
+<h2>puts</h2>
+<p>Converts to string and print something out, returns nil</p>
+<p>E.g. puts "Hi there!"</p>
+<h2>p</h2>
+<p>Print something out, keeps type intact returns value</p>
+<p>E.g. p "Hi there!"</p>
+<h2>Random Number</h2>
+<p>rand (optional)</p>
+<p>Returns int between 0 and your argument, if not argument returns float between 0 and 1</p>
+<p>E.g. rand(100)</p>
+<p>E.g. rand</p>
+<h2>Replace</h2>
+<p>String Replace of 1st or all instances</p>
+<p>E.g. "Adrian".sub(“A”, “”)</p>
+<p>E.g. "Igloo".gsub(“o”, “”)</p>
+<h2>Substring (comma, length)</h2>
+<p>No substring method, uses commas and length</p>
+<p>E.g. # Get substring at index 1 with length 3.</p>
+<h1>... First argument is start index, second is length.</h1>
+<p>last_three = value(1,3)</p>
+<p>E.g. # Get substring at index 1 with length 2.</p>
+<p>middle_two = value(1,2)</p>
+<p>E.g. # Get substring from characters at end of string</p>
+<p>last_two = value(-2)</p>
+<h2>Substring (ranges and expressions)</h2>
+<p>No substring method, uses ranges and expressions</p>
+<p>E.g. # Get substring at indexes 0 through 3.</p>
+<h1>... This is the first four characters.</h1>
+<p>first_part = value[0..3]</p>
+<p>E.g. # Get substring at indexes 3 through 4.</p>
+<h1>... This is the character at index 3.</h1>
+<p>second_part = value[2..3]</p>
+<p>E.g. # Get substring past index three through end of string.</p>
+<p>last_part = value[3..-1]</p>
+<h2>Strip (whitespace before and after string)</h2>
+<p>Removes whitespace before and after string</p>
+<p>E.g. string.strip</p>
+<h2>Single line comment</h2>
+<p>Use #</p>
+<p>E.g. # my single comment</p>
+<h2>Multi line comment</h2>
+<p>Use =begin and =end</p>
+<p>E.g.</p>
+<p>=begin</p>
+<p>my first line comment</p>
+<p>my second line comment</p>
+<p>=end</p>
+<h2>Looping: do</h2>
+<p>Use do, end, break, break if</p>
+<p>loop do</p>
+<p>monk.meditate</p>
+<p>break if monk.nirvana?</p>
+<p>end</p>
+<h2>Looping: times (only on FixNum class)</h2>
+<p>Use .times to set how many times to do something</p>
+<p>n.times do</p>
+<h1>do something</h1>
+<p>end</p>
+<p>or</p>
+<p>1.upto(10){ |k| puts "Number #{k}"}</p>
+<p>or</p>
+<p>10.downto(5){ |k| puts "Number #{k}"}</p>
+<h2>Looping: for</h2>
+<p>Use for loop for more control</p>
+<p>for num in 1..100</p>
+<p>puts num</p>
+<p>End</p>
+<p>or</p>
+<p>for num in 1..100 do</p>
+<p>puts "Hello world, this is number #{num}"</p>
+<p>end</p>
+<h2>Looping: while</h2>
+<p>Use a while loop to keep going unless a certain condition is met</p>
+<p>x = 100</p>
+<p>while x > 0</p>
+<p>x -= 1</p>
+<p>puts "This loop will run #{x} more times"</p>
+<p>end</p>
+<p>or</p>
+<p>x = 100</p>
+<p>puts "This loop will run #{x -= 1} more times" while x > 0</p>
+<h2>Looping: .each</h2>
+<p>Use a .each in Ruby, it’s preferred and will work on arrays</p>
+<p>(1..100).each do |k|</p>
+<p>puts "#{k}. This is Ruby preferred way of doing loops, when possible"</p>
+<p>end</p>
+<p>or</p>
+<p>(1..100).each{ |k| puts "#{k}. Curly braces make it even shorter"}</p>
+<h2>Array &#x26; Hash looping</h2>
+<p>.each do |item|</p>
+<p><em>Code</em></p>
+<p>end</p>
+<p>E.g.</p>
+<p>array.each do |item|</p>
+<p>puts "The current array item is: #{item}"</p>
+<p>end</p>
+<h2>Array &#x26; Hash looping</h2>
+<p>.each_pair do |key, value|</p>
+<p><em>Code</em></p>
+<p>end</p>
+<p>E.g.</p>
+<p>array.each_pair do |key, value|</p>
+<p>puts "The #{key} is #{value}"</p>
+<p>end</p>
+<h2>Hash looping</h2>
+<p>.each_key do |key|</p>
+<p><em>Code</em></p>
+<p>end</p>
+<p>E.g.</p>
+<p>hash.each_key do |key|</p>
+<p>puts "The key is #{key}"</p>
+<p>end</p>
+<h2>Hash looping</h2>
+<p>.each_value do |value|</p>
+<p><em>Code</em></p>
+<p>end</p>
+<p>E.g.</p>
+<p>hash.each_value do |value|</p>
+<p>puts "The value is #{value}"</p>
+<p>end</p>
+<h2>Hash getting value</h2>
+<p>Use fetch as it returns either a value when the key is found or a default value if nothing in the hash at that key</p>
+<p>.fetch(key, default<em>return</em>value)</p>
+<p><em>Code</em></p>
+<p>end</p>
+<p>E.g.</p>
+<p>hash.fetch(key, value)</p>
+<p>puts "Nothing found at #{key}, therefore #{value}"</p>
+<p>End</p>
+<p>or</p>
+<p>hsh[letter] = hsh.fetch(letter,0) + 1</p>
+<h2>Array &#x26; Hash sorting</h2>
+<p>Use .sort and .reverse for simple numerical and alphabetical sorting. Use .sort_by for complex or multi-dimensional sorting</p>
+<p>E.g.</p>
+<p>tasks.sort<em>by{ |t| t.due</em>date }</p>
+<p>or</p>
+<p>tasks.sort<em>by(&#x26;:due</em>date)</p>
+<p>or (multi array)</p>
+<p>tasks.sort<em>by{ |t| [t.due</em>date, t.priority] }</p>
+<p>presidents.sort<em>by{ |hsh| hsh[:last</em>name] }.reverse</p>
+<p>frequencies = frequencies.sort<em>by {|word, num</em>times| num_times }</p>
+<h2>Regular Expressions</h2>
+<p>Use .match and .scan - .match returns first instance with match in array key [0] and each () matched group in following array elements. .scan returns all matched instances in an array</p>
+<p>E.g. .match</p>
+<p>regex = /^(\w<em>) \w</em> (\d<em>) (.</em>)/</p>
+<p>string = "ebu inc 626 if iq &#x3C; 0"</p>
+<p>mtch = string.match(regex)</p>
+<p>puts "Matched: " + mtch</p>
+<p>puts "Matched the variable: #{mtch[1]}, the number #{mtch[2]}, and the expression #{mtch[3]}"</p>
+<p>E.g. .scan</p>
+<p>locations = 'Alabama, AL, Alaska, AK, Arizona, AZ, Arkansas, AR, California, CA, Colorado, CO, Connecticut, CT, Delaware, DE, Florida, FL, Georgia, GA, South Dakota, SD'</p>
+<p>puts locations.scan(/[A-Z]{2}/).join(', ')</p>
+<h1>=> AL, AK, AZ, AR, CA, CO, CT, DE, FL, GA, SD</h1>
+<h2>Open a url and read to variable</h2>
+<p>require "open-uri"</p>
+<p>open and read, open will follow redirects and also has the base_uri property for whatever it finally opened</p>
+<p>E.g.</p>
+<p>require "open-uri"</p>
+<p>page = open(url).read</p>
+<p>puts page.base_uri</p>
+<h2>Open a file and read, write, close</h2>
+<p>Open with "w", read, write, close - “File” is not required but good for readability</p>
+<p>E.g.</p>
+<p>local_file = File.open("tweets-on-hard-drive.xml", "w")</p>
+<p>tweets = remote_page.read</p>
+<p>local_file.write(tweets)</p>
+<p>local_file.close</p>
+<h2>Test if something exists</h2>
+<p>The nil value is the same as null in javascript</p>
+<p>E.g.</p>
+<p>value.nil?</p>
+<h2>Check class</h2>
+<p>Use is_ for various class types</p>
+<p>E.g.</p>
+<p>Value.is_a // print the class</p>
+<p>Value.is_a? == FixNum // is this an integer?</p>
+<p>Value.is_a? == Float // is this a float?</p>
+<p>Value.is_a? == String // is this a string?</p>
+<p>puts "That's not an integer." unless n.is_a? Integer</p>
+<h2>Change class</h2>
+<p>Use to_ for various class types</p>
+<p>E.g.</p>
+<p>value.to_i // change to integer</p>
+<p>value.to_s // change to string</p>
+<p>value.to_f // change to float</p>
+<p>value.to_a // change to array</p>
+<h2>Load a YAML file</h2>
+<p>Load the contents of a YAML file into a variable</p>
+<p>E.g.</p>
+<p>require 'yaml'</p>
+<p>data = YAML.load_file("data.yaml")</p>
+<p>Save to a YAML file</p>
+<p>Save the contents of an array to a YAML file</p>
+<p>E.g.</p>
+<p>require 'yaml'</p>
+<p>data = {"name" => "Xavier"}</p>
+<p>File.open("path/to/output.yml", "w") {|f| f.write(data.to_yaml) }</p>
+<hr>
+<h1>References</h1>
+<h2>All Contents</h2>
+<p><a href="http://ruby.bastardsbook.com/toc/">http://ruby.bastardsbook.com/toc/</a></p>
+<h2>Numbers</h2>
+<p><a href="http://ruby.bastardsbook.com/chapters/numbers/">http://ruby.bastardsbook.com/chapters/numbers/</a></p>
+<h2>Strings</h2>
+<p><a href="http://ruby.bastardsbook.com/chapters/strings/">http://ruby.bastardsbook.com/chapters/strings/</a></p>
+<h2>Arrays (Collections)</h2>
+<p><a href="http://ruby.bastardsbook.com/chapters/collections/">http://ruby.bastardsbook.com/chapters/collections/</a></p>
+<h2>Methods</h2>
+<p><a href="http://ruby.bastardsbook.com/chapters/methods/">http://ruby.bastardsbook.com/chapters/methods/</a></p>
+<p>Control: if / else</p>
+<p><a href="http://ruby.bastardsbook.com/chapters/ifelse/">http://ruby.bastardsbook.com/chapters/ifelse/</a></p>
+<p>Control: loops</p>
+<p><a href="http://ruby.bastardsbook.com/chapters/loops/">http://ruby.bastardsbook.com/chapters/loops/</a></p>
+<h2>Regular Expressions</h2>
+<p><a href="http://ruby.bastardsbook.com/chapters/regexes/">http://ruby.bastardsbook.com/chapters/regexes/</a></p>
+<p><a href="http://rubular.com/">http://rubular.com/</a></p>
+<p><a href="https://www.regular-expressions.info/">https://www.regular-expressions.info/</a></p>
+<h2>Byebug</h2>
+<p><a href="https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md">https://github.com/deivid-rodriguez/byebug/blob/master/GUIDE.md</a></p>
+<h2>YAML</h2>
+<pre><code>[https://rhnh.net/2011/01/31/yaml-tutorial/](https://rhnh.net/2011/01/31/yaml-tutorial/)
+</code></pre></div></div></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-post-js","jsonName":"ruby-commands-and-code-737","path":"/ruby-commands-and-code/"};window.dataPath="372/path---ruby-commands-and-code-737-580-gY5hJO2lVwGOI8iJBMnBGyDkY";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-5ea056d26ea378e3abcd.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-e4a117b922acdaf0a26a.js"],"component---src-pages-404-js":["/component---src-pages-404-js-752863217922ee2c80cd.js"],"component---src-pages-index-js":["/component---src-pages-index-js-87ed00274bdec9d7d503.js"],"component---src-pages-page-2-js":["/component---src-pages-page-2-js-7ede98fc98aa848be829.js"],"pages-manifest":["/pages-manifest-b3326e2e825bd833ad0b.js"]};/*]]>*/</script><script src="/your-repo-name/webpack-runtime-2aa1455c642d3d5fbb7a.js" async=""></script><script src="/your-repo-name/app-5ea056d26ea378e3abcd.js" async=""></script><script src="/your-repo-name/component---src-templates-blog-post-js-e4a117b922acdaf0a26a.js" async=""></script></body></html>
