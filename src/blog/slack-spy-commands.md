@@ -3,6 +3,8 @@ title: Slack Spy Commands
 date: "2019-06-18"
 ---
 
+# You can create a private repo in Github without needing to pay for it on Github. you can't add collaborators to it
+
 # Slack Spy Commands
 
 ## Create Private Repo

@@ -3,6 +3,8 @@ title: Ruby - Commands & Code
 date: "2018-03-01"
 ---
 
+# Blocks are simple 'blocks of code' that can be called and sent code/variables to execute within the block. Use the “yield” within the block to use the calling source
+
 # Ruby: Commands & Code
 
 # Basics

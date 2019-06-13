@@ -3,6 +3,8 @@ title: Terminal Commands
 date: "2018-04-20"
 ---
 
+# Terminal, start ngrok and open tunnel. Get subdomain and add to index.js and save. Open partner account and update app credentials. Open app in test store
+
 **Terminal Commands**
 
 ---
